@@ -34,15 +34,18 @@ for (let i = 0; i < images.length; i++) {
   containerHighlighted.innerHTML += `<img src="${
     images[i].image
   }" alt="" class="${i == 0 ? "active" : ""} ">
-  <h3> Marvel's Spider-Man Miles Morales</h3>
-  <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man</p>`;
+  <h3>${images[i].title}</h3>
+  <p>${images[i].text}</p>`;
   containerThumbs.innerHTML += `<img src="${images[i].image}" alt="" class="${
     i == 0 ? "active" : ""
-  } ">`;
+  } ">
+  `;
 }
 
 // SELECT IMG IN HTML
 const listHighlighted = document.querySelectorAll(".highlighted img");
+const textInfo = document.querySelectorAll("p");
+const titleGame = document.querySelectorAll("h3");
 
 // SELECT THE MINIATURES
 const listThumbs = document.querySelectorAll(".thumbs img");

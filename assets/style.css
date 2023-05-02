@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* CONTAINER */
@@ -82,16 +83,26 @@
 }
 
 h3 {
+    display: none;
     position: absolute;
     right: 200px;
     bottom: 60px;
     color: white;
 }
 
+.h3-active{
+    display: block;
+}
+
 p {
+    display: none;
     position: absolute;
     right: 200px;
     bottom: 20px;
     color: white;
     text-align: end;
+}
+
+.p-active {
+    display: block;
 }
