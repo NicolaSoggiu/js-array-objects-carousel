@@ -27,11 +27,28 @@ const images = [
   },
 ];
 
-// ARRAY CONSOLE LOG
-images.forEach((el) => {
-  console.log("images", el);
-});
+const containerHighlighted = document.querySelector(".highlighted");
+const containerThumbs = document.querySelector(".thumbs");
 
-// ADD IN DOM
-const cell = document.querySelector("#cell");
-printCell(images, cell);
+for (let i = 0; i < images.length; i++) {
+  containerHighlighted.innerHTML += `<img src="${
+    images[i].image
+  }" alt="" class="${i == 0 ? "active" : ""} ">
+  <h3> Marvel's Spider-Man Miles Morales</h3>
+  <p>Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man</p>`;
+  containerThumbs.innerHTML += `<img src="${images[i].image}" alt="" class="${
+    i == 0 ? "active" : ""
+  } ">`;
+}
+
+// SELECT IMG IN HTML
+const listHighlighted = document.querySelectorAll(".highlighted img");
+
+// SELECT THE MINIATURES
+const listThumbs = document.querySelectorAll(".thumbs img");
+
+// SELECT THE BUTTON
+const btnPrev = document.querySelector(".btn-up");
+const btnNext = document.querySelector(".btn-down");
+
+let activeIndex = 0;
