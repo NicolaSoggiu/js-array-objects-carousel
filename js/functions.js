@@ -49,3 +49,7 @@ for (let i = 0; i < listThumbs.length; i++) {
     listThumbs[activeIndex].classList.add("active");
   });
 }
+
+// SHOW THE FIRST TITLE AND THE FIRST TEXT WHEN I LOAD THE PAGE
+titleGame[0].classList.add("h3-active");
+textInfo[0].classList.add("p-active");
